@@ -9,6 +9,7 @@ class ListNode:
 # @param lists ListNode类一维数组 
 # @return ListNode类
 #
+# 非剑指offer
 class Solution:
     # 归并排序的分治
     def mergeKLists(self , lists: List[ListNode]) -> ListNode:

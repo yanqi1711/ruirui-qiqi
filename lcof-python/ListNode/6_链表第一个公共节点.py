@@ -9,6 +9,7 @@
 # @param pHead2 ListNode类 
 # @return ListNode类
 #
+# 哈希实现
 class Solution:
     def FindFirstCommonNode(self , pHead1 , pHead2 ):
         # write code here
