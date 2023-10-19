@@ -1,24 +1,32 @@
-# -*- coding:utf-8 -*-
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
-#
 # 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
 #
 # 
-# @param listNode ListNode类 
-# @return int整型一维数组
-# -> List[int]
+# @param head ListNode类 
+# @return ListNode类
+#
 class Solution:
     def ReverseList(self , head: ListNode) -> ListNode:
-        if head is None:
-            return ListNode(None)
-        a = head.next
-        head.next = None
-        
-        
-        return 
+
+        # 当head为空的时候 条件为true
+        if not head:
+            return None
+        # pre = head 会断链
+        # after = head.next
+        after = head
+        pre = None
+        # after的next为None说明到了最后一个可以停止
+        # 如果是pre则还会进行一次
+        while after:
+            temp = after.next
+            after.next = pre
+            pre = after
+            after = temp
+        # after此时为None
+        return pre
     
 if __name__ == "__main__":
     s = Solution()
