@@ -1,6 +1,7 @@
 package 树;
 
 import definition.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -15,22 +16,21 @@ public class KthNode {
      */
     public int kthNode (TreeNode proot, int k) {
         // write code here
-        preOrder(proot);
+        preGet(proot);
         int len = list.size();
-        if (len < k || k < 0 || proot == null) {
+        if (len < k || k < 1 || proot == null) {
             return  -1;
         }
         Collections.sort(list);
         return list.get(k - 1);
     }
-
-    // 前序遍历
-    private void preOrder(TreeNode root) {
+    private void preGet (TreeNode root) {
+        // 前序遍历
         if (root == null) {
             return;
         }
         list.add(root.val);
-        preOrder(root.left);
-        preOrder(root.right);
+        preGet(root.left);
+        preGet(root.right);
     }
 }
