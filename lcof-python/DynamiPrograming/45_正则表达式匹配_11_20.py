@@ -8,6 +8,7 @@ class Solution:
         n = len(str)
         m = len(pattern)
         dp = [[False for i in range(m+1)] for j in range(n+1)]
+        # dp[i][j] 当字符串长度为ij时 s与p是否匹配
         dp[0][0] = True
         for j in range(2,m+1):
             if pattern[j - 1] == '*':
