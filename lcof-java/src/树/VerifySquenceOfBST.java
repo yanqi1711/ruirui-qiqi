@@ -6,7 +6,7 @@ public class VerifySquenceOfBST {
     /**
      * 二叉搜索树的后序遍历序列
      */
-    public boolean verifySquenceOfBST(int[] sequence) {
+    public boolean verifySequenceOfBST(int[] sequence) {
         int n = sequence.length;
         // 空树不是二叉搜索树，返回false
         if (n == 0) return false;
