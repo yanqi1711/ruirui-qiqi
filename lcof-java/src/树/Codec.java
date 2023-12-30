@@ -11,7 +11,7 @@ public class Codec {
     /**
      * 序列化二叉树
      */
-    String serialize(TreeNode root) {
+    public String serialize(TreeNode root) {
         if (root == null) return "[]";
         StringBuilder res = new StringBuilder("[");
         Queue<TreeNode> queue = new LinkedList<>();
@@ -35,7 +35,7 @@ public class Codec {
     /**
      * 二叉树的反序列化
      */
-    TreeNode deserialize(String str) {
+    public TreeNode deserialize(String str) {
         if (str.equals("[]")) return null;
         String[] vals = str.substring(1, str.length() - 1).split(",");
         TreeNode root = new TreeNode(Integer.parseInt(vals[0]));
