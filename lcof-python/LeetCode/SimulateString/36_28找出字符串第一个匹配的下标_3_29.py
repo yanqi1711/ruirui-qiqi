@@ -15,7 +15,7 @@ def build_next(patt):
                 next.append(0)
                 i+=1
             else:
-                # 前面有几个相同的前缀
+                # 当前不相等 向前找更短的前缀 next[2-1]即找到更短前缀 比如 aaaaaa 和 aaaaab 此时prefix为4 b!=a 所以需要回退
                 prefix_len = next[prefix_len-1]
     return next
 class Solution:
