@@ -13,7 +13,7 @@ class Solution:
             return sum
         rightSum = self.popreorder(root.right, sum)
         root.val += rightSum
-        leftSum=self.popreorder(root.left,root.val);
+        leftSum=self.popreorder(root.left,root.val)
         return leftSum
 
     def convertBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
