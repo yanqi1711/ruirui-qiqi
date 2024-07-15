@@ -34,7 +34,6 @@ class Solution:
             # return self.count
         self.countsum(root.left, sum - root.val)
         self.countsum(root.right, sum - root.val)
-        return self.count
 
     # 不需要从根节点开始，也不需要在叶子节点结束
     def FindPath(self , root: TreeNode, sum: int) -> int:
