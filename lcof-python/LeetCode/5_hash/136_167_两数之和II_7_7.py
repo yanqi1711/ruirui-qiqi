@@ -4,7 +4,6 @@ class Solution:
         if not numbers:
             return None
         left,right = 0, len(numbers)-1
-            # 二分查找
         while left < right:
             x = numbers[left] + numbers[right]
             if x == target:
