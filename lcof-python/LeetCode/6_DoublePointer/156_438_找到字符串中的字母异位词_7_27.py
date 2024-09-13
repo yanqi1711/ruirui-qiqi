@@ -22,9 +22,9 @@ class Solution:
             count[ord(s[right])-97] -=1
             # 1 当前窗口里面存在不是p里面的词语 s:cab  p:ab 所以需要移动窗口给他加上
             # 2 s: abcab p:ab 到c了 直接把left拉到c 因为之前ab被减少了 所以需要补起来
-            # 3 s: abcde p:z  小于1直接把c 拉满
+            # 3 s: abcde p:z  小于1 完全不匹配 减多少就加多少
             while count[ord(s[right]) - 97] < 0:
-                # 补充到原始状态 因为异位单词必须时连续的
+                # 补充到原始状态 因为异位单词必须时连续的 减多少 加多少
                 count[ord(s[left]) - 97] += 1
                 left += 1
             if right-left+1 == p_len:
