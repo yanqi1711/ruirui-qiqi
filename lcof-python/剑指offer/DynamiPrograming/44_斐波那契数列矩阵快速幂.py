@@ -4,7 +4,7 @@ class Solution:
         res = []
         for i in range(len(matrix1)):
             temp = []
-            for j in range(len(matrix2)):#3*4 4*3 不能加[1] 这里运气好 都是2,2 换一个就寄
+            for j in range(len(matrix2[0])):
                 sum = 0
                 for k in range(len(matrix2)):
                     sum += matrix1[i][k] * matrix2[k][j]
