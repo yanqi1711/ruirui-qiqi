@@ -12,6 +12,7 @@ class Solution:
         self.inOrder(root.left)
         if self.prev is not None and self.prev.val >= root.val:
             self.res=False
+        # 每次向下就 存储上一个的值 然后比较
         self.prev = root
         self.inOrder(root.right)
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
