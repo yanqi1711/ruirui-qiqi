@@ -8,7 +8,7 @@ class Solution:
         # 整个dp代表 当天所有情况
         dp[0][0][0] = 1
         for i in range(1, n+1):
-            # 当天出现P
+            # P
             for j in range(2): # A出现次数不会被消除 所以j不会变
                 for k in range(3): # 迟到次数会被消除为0 所以需要把k情况全部加到 k=0的位置
                     # 基于以上2个原因 所以j会变 k都为0
