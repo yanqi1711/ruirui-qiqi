@@ -9,7 +9,6 @@ class Solution:
         if len(ransomNote) > len(magazine):
             return False
         my_hash = {}
-        index = 0
         for i in magazine:
             if i in my_hash.keys():
                 my_hash[i] += 1

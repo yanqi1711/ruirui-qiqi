@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def leastBricks(self, wall: List[List[int]]) -> int:
         缝隙 = dict()
@@ -6,6 +9,7 @@ class Solution:
             # 最后的边界不能要
             for j in i[:-1]:
                 cur += j
+                # 每一个都是一个缝隙 需要保存起来
                 缝隙[cur] = 缝隙.get(cur, 0) + 1
         # 找到缝隙最多的点
         max_ = 0

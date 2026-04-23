@@ -4,6 +4,7 @@ class Solution:
         for _ in range(n):
             a,b=b,b+a
         return a
+    
 class Solution:
     # 二阶其实可以加速
     def mutiply(self, matrix1, matrix2):

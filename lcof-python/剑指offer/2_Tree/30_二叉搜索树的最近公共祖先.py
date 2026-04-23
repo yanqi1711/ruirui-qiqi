@@ -13,25 +13,6 @@ class TreeNode:
 # @return int整型
 #
 class Solution:
-    # 通用解法 不需要二叉搜索树
-    def DFS(self, root, node:int, path: list):
-        if not root:
-            return
-        path.append(root.val)
-        # 相等直接结束
-        if path[-1] == node: return
-        #  完全不需要 判断是不是叶子结点 并且叶子结点是否等于node
-        # if not root.left and not root.right and root.val != node:
-        #     path.pop()
-        #     return
-        # 不相等接着遍历
-        self.DFS(root.left, node, path)
-        self.DFS(root.right, node, path)
-        # 当前结点不等于node 其儿子结点也不等于就pop
-        # 有一个等于就进入上一层循环了
-        if path[-1] != node: 
-            path.pop() 
-            return
     # 二叉搜索树
     def get_path(self, root, target):
         path = []
